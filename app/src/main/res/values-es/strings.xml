@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Copa Mundial de la FIFA 2026</string>
+    <string name="label_home">Inicio</string>
+    <string name="label_favorites">Favoritos</string>
+    <string name="label_profile">Perfil</string>
+    <string name="greeting_text">¡Hola %1$s!</string>
+    <string name="default_name">Android</string>
+    <string name="language_select">Seleccionar idioma</string>
+    <string name="lang_fr">Francés</string>
+    <string name="lang_en">Inglés</string>
+    <string name="lang_es">Español</string>
+    <string name="internet_connection_lost">Conexión a Internet perdida</string>
+    <string name="splash_title">Copa Mundial de la FIFA México 2026</string>
+    <string name="splash_subtitle">Cómputo Móvil, UNAM 2026</string>
+    <string name="cd_banner">Banner de la Copa del Mundo</string>
+    <string name="title_meet_teams">Conoce a los equipos</string>
+    <string name="cd_refresh">Actualizar</string>
+    <string name="error_failed_teams">Error al cargar los equipos</string>
+    <string name="btn_retry">Reintentar</string>
+    <string name="cd_flag">Bandera de %1$s</string>
+    <string name="label_founded">Fundado en: %1$d</string>
+    <string name="cd_venue">Estadio</string>
+    <string name="error_failed_squad">Error al cargar la plantilla</string>
+    <string name="title_squad">Plantilla de %1$s</string>
+    <string name="label_years_old">%1$d años</string>
+    <string name="cd_splash_logo">Logo de inicio</string>
+    <string name="cd_cup_logo">Logo de la Copa</string>
+</resources>
