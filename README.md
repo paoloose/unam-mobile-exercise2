@@ -32,4 +32,10 @@ Build #AI-253.31033.145.2533.15113396
 
 ## Demo
 
-![Demo](./assets/demo.mp4)
+## Palette
+
+Pallete by Nightingale1000 @ DevianArt
+
+See <https://www.deviantart.com/nightingale1000/art/FIFA-World-Cup-2026-color-palette-1227823295>
+
+<img width=400 src="./assets/palette.png" />
