@@ -27,6 +27,7 @@ import site.paoloose.unam.exercise2.ui.viewmodel.SquadViewModel
 fun SquadScreen(
     teamId: Int,
     useFootballApi: Boolean = false,
+    isConnected: Boolean = true,
     modifier: Modifier = Modifier,
     viewModel: SquadViewModel = viewModel()
 ) {
@@ -34,6 +35,14 @@ fun SquadScreen(
 
     LaunchedEffect(teamId, useFootballApi) {
         viewModel.fetchSquad(teamId, useFootballApi)
+    }
+
+    var wasDisconnected by remember { mutableStateOf(false) }
+    LaunchedEffect(isConnected) {
+        if (isConnected && wasDisconnected) {
+            viewModel.fetchSquad(teamId, useFootballApi)
+        }
+        wasDisconnected = !isConnected
     }
 
     Box(

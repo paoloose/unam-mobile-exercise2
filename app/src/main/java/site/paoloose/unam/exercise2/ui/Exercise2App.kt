@@ -125,11 +125,13 @@ fun Exercise2App() {
                             SquadScreen(
                                 teamId = selectedTeamId!!,
                                 useFootballApi = apiSource == ApiSource.API_FOOTBALL,
+                                isConnected = isConnected,
                                 modifier = Modifier.fillMaxSize()
                             )
                         } else {
                             HomeScreen(
                                 onTeamClick = { selectedTeamId = it },
+                                isConnected = isConnected,
                                 modifier = Modifier.fillMaxSize()
                             )
                         }
