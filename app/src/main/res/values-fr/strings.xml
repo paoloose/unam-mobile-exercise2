@@ -30,6 +30,9 @@
     <string name="menu_open">Ouvrir le menu</string>
     <string name="menu_language">Langue</string>
     <string name="menu_api_source">Source des données</string>
+    <string name="menu_theme">Thème</string>
     <string name="source_computomovil_mock">Computomovil (Mock)</string>
     <string name="source_api_footbal">API-Football</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="theme_light">Clair</string>
 </resources>
