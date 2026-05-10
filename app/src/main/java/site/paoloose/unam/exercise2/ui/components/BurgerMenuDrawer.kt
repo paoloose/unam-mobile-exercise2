@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.SwapHoriz
-import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -32,7 +31,6 @@ import androidx.core.os.LocaleListCompat
 import site.paoloose.unam.exercise2.R
 import site.paoloose.unam.exercise2.ui.viewmodel.ApiSource
 import site.paoloose.unam.exercise2.ui.viewmodel.SettingsViewModel
-import site.paoloose.unam.exercise2.ui.viewmodel.ThemeMode
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,8 +49,6 @@ fun BurgerMenuDrawer(
                     LanguageSection()
                     HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
                     ApiSourceSection(settingsViewModel)
-                    HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-                    ThemeSection(settingsViewModel)
                 }
             }
         },
@@ -135,44 +131,6 @@ private fun ApiSourceSection(settingsViewModel: SettingsViewModel) {
             label = { Text(stringResource(labelRes)) },
             selected = currentSource == source,
             onClick = { settingsViewModel.setApiSource(source) },
-            modifier = Modifier.padding(vertical = 2.dp)
-        )
-    }
-}
-
-@Composable
-private fun ThemeSection(settingsViewModel: SettingsViewModel) {
-    val currentTheme by settingsViewModel.themeMode.collectAsState()
-
-    val themes = listOf(
-        ThemeMode.GREEN to R.string.theme_green,
-        ThemeMode.BLUE to R.string.theme_blue,
-        ThemeMode.RED to R.string.theme_red,
-        ThemeMode.VIOLET to R.string.theme_violet
-    )
-
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(
-            imageVector = Icons.Default.Palette,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.size(24.dp)
-        )
-        Spacer(Modifier.width(12.dp))
-        Text(
-            text = stringResource(R.string.menu_theme),
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.onSurface
-        )
-    }
-
-    Spacer(modifier = Modifier.height(12.dp))
-
-    themes.forEach { (mode, labelRes) ->
-        NavigationDrawerItem(
-            label = { Text(stringResource(labelRes)) },
-            selected = currentTheme == mode,
-            onClick = { settingsViewModel.setThemeMode(mode) },
             modifier = Modifier.padding(vertical = 2.dp)
         )
     }

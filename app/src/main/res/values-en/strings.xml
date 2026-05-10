@@ -25,4 +25,11 @@
     <string name="label_years_old">%1$d years old</string>
     <string name="cd_splash_logo">Splash Logo</string>
     <string name="cd_cup_logo">Cup Logo</string>
+    <string name="error_no_squad_found">No squad found for this team</string>
+    <string name="error_unknown">Unknown error</string>
+    <string name="menu_open">Open menu</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_api_source">Data Source</string>
+    <string name="source_computomovil_mock">Computomovil (Mock)</string>
+    <string name="source_api_footbal">API-Football</string>
 </resources>

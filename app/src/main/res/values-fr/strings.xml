@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Coupe du Monde de la FIFA 2026</string>
+    <string name="label_home">Accueil</string>
+    <string name="label_favorites">Favoris</string>
+    <string name="label_profile">Profil</string>
+    <string name="greeting_text">Bonjour %1$s !</string>
+    <string name="default_name">Android</string>
+    <string name="language_select">Choisir la langue</string>
+    <string name="lang_fr">Français</string>
+    <string name="lang_en">Anglais</string>
+    <string name="lang_es">Espagnol</string>
+    <string name="internet_connection_lost">Connexion Internet perdue</string>
+    <string name="splash_title">Coupe du Monde de la FIFA Mexique 2026</string>
+    <string name="splash_subtitle">Informatique Mobile, UNAM 2026</string>
+    <string name="cd_banner">Bannière de la Coupe du Monde</string>
+    <string name="title_meet_teams">Rencontrez les équipes</string>
+    <string name="cd_refresh">Rafraîchir</string>
+    <string name="error_failed_teams">Échec du chargement des équipes</string>
+    <string name="btn_retry">Réessayer</string>
+    <string name="cd_flag">Drapeau de %1$s</string>
+    <string name="label_founded">Fondé en: %1$d</string>
+    <string name="cd_venue">Stade</string>
+    <string name="error_failed_squad">Échec du chargement de l\'équipe</string>
+    <string name="title_squad">Équipe de %1$s</string>
+    <string name="label_years_old">%1$d ans</string>
+    <string name="cd_splash_logo">Logo de démarrage</string>
+    <string name="cd_cup_logo">Logo de la Coupe</string>
+    <string name="error_no_squad_found">Aucune équipe trouvée pour cette sélection</string>
+    <string name="error_unknown">Erreur inconnue</string>
+    <string name="menu_open">Ouvrir le menu</string>
+    <string name="menu_language">Langue</string>
+    <string name="menu_api_source">Source des données</string>
+    <string name="source_computomovil_mock">Computomovil (Mock)</string>
+    <string name="source_api_footbal">API-Football</string>
+</resources>

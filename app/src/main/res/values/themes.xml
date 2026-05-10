@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Exercise1" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="Theme.Exercise2" parent="Theme.AppCompat.Light.NoActionBar" />
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <!-- Set the splash screen background, animated icon, and animation duration. -->
-        <item name="windowSplashScreenBackground">#004C3F</item> <!-- GreenDark -->
-        <!-- Use transparent icon so the native splash is purely a solid background -->
+        <item name="windowSplashScreenBackground">@color/green_dark</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_empty_splash</item>
-        <item name="postSplashScreenTheme">@style/Theme.Exercise1</item>
+        <item name="postSplashScreenTheme">@style/Theme.Exercise2</item>
     </style>
 </resources>

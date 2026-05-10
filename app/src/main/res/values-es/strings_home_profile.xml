@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_title">Cómputo móvil</string>
-    <string name="home_description">Ejercicio 1: Creación de perfil</string>
+    <string name="home_description">Ejercicio 2: Creación de perfil</string>
     <string name="btn_create_profile">Crear perfil</string>
     <string name="profile_not_created">Aún no se ha creado un perfil.</string>
     <string name="btn_edit_profile">Editar perfil</string>
