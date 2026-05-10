@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
 import site.paoloose.unam.exercise2.ui.theme.AppBlack
-import site.paoloose.unam.exercise2.ui.theme.AppWhite
 import site.paoloose.unam.exercise2.ui.theme.GoldDark
 import site.paoloose.unam.exercise2.ui.theme.GoldBright
 import site.paoloose.unam.exercise2.ui.theme.RedAccent
@@ -100,7 +99,7 @@ fun HomeScreen(
                     text = stringResource(R.string.title_meet_teams),
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold,
-                    color = AppWhite
+                    color = MaterialTheme.colorScheme.onBackground
                 )
                 // Reload data button
                 Box(
@@ -113,7 +112,7 @@ fun HomeScreen(
                         Icon(
                             imageVector = Icons.Default.Refresh,
                             contentDescription = stringResource(R.string.cd_refresh),
-                            tint = AppWhite
+                            tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
                 }

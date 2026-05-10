@@ -38,3 +38,8 @@ val AppWhite = Color(0xFFFFFFFF)
 // Gold
 val GoldDark = Color(0xFF5A4300)
 val GoldBright = Color(0xFFFFC107)
+
+// Light theme surfaces
+val LightSurfaceVariant = Color(0xFFD8E4D8)
+val LightOnSurfaceVariant = Color(0xFF1A3A1A)
+val LightPrimaryContainer = Color(0xFFC8E6C9)
