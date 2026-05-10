@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "site.paoloose.unam.exercise1"
+    namespace = "site.paoloose.unam.exercise2"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "site.paoloose.unam.exercise1"
+        applicationId = "site.paoloose.unam.exercise2"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

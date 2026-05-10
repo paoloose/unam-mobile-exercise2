@@ -32,7 +32,7 @@ jobs:
 
       - name: Sign APK with Temporary Keystore
         run: |
-          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/paolo_exercise1-unsigned.apk
+          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/paolo_exercise2-unsigned.apk
 
           # Generate a temporary keystore
           keytool -genkey -v -keystore temp.keystore -alias tempalias -keyalg RSA -keysize 2048 -validity 10000 -storepass password -keypass password -dname "CN=Temp, OU=Temp, O=Temp, L=Temp, S=Temp, C=US"
@@ -42,19 +42,19 @@ jobs:
           BUILD_TOOLS_DIR=$(ls -d $ANDROID_SDK_ROOT/build-tools/* | tail -1)
 
           # Use apksigner
-          $BUILD_TOOLS_DIR/apksigner sign --ks temp.keystore --ks-pass pass:password --ks-key-alias tempalias --out app/build/outputs/apk/release/paolo_exercise1.apk app/build/outputs/apk/release/paolo_exercise1-unsigned.apk
+          $BUILD_TOOLS_DIR/apksigner sign --ks temp.keystore --ks-pass pass:password --ks-key-alias tempalias --out app/build/outputs/apk/release/paolo_exercise2.apk app/build/outputs/apk/release/paolo_exercise2-unsigned.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: paolo_exercise1
-          path: app/build/outputs/apk/release/paolo_exercise1.apk
+          name: paolo_exercise2
+          path: app/build/outputs/apk/release/paolo_exercise2.apk
 
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ steps.vars.outputs.sha_short }}
           name: Build ${{ steps.vars.outputs.sha_short }}
-          files: app/build/outputs/apk/release/paolo_exercise1.apk
+          files: app/build/outputs/apk/release/paolo_exercise2.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
