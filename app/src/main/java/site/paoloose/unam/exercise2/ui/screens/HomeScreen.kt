@@ -283,7 +283,7 @@ fun TeamVenueCard(teamVenue: TeamVenueDto, onClick: () -> Unit) {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "%,d".format(teamVenue.venue.capacity),
+                            text = stringResource(R.string.capacity_format, teamVenue.venue.capacity),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = GoldBright // Bright Gold

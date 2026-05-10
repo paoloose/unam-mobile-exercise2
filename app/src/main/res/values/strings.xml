@@ -35,4 +35,5 @@
     <string name="source_api_footbal">API-Football</string>
     <string name="theme_dark">Oscuro</string>
     <string name="theme_light">Claro</string>
+    <string name="capacity_format">%,d</string>
 </resources>
