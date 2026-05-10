@@ -1,14 +1,16 @@
-package site.paoloose.unam.exercise1.ui.viewmodel
+package site.paoloose.unam.exercise2.ui.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import site.paoloose.unam.exercise1.data.remote.ApiClient
-import site.paoloose.unam.exercise1.data.remote.dto.TeamVenueDto
-import site.paoloose.unam.exercise1.data.repository.TeamsRepository
+import site.paoloose.unam.exercise2.R
+import site.paoloose.unam.exercise2.data.remote.ApiClient
+import site.paoloose.unam.exercise2.data.remote.dto.TeamVenueDto
+import site.paoloose.unam.exercise2.data.repository.TeamsRepository
 
 sealed class TeamsUiState {
     object Loading : TeamsUiState()
@@ -16,7 +18,7 @@ sealed class TeamsUiState {
     data class Error(val message: String) : TeamsUiState()
 }
 
-class TeamsViewModel : ViewModel() {
+class TeamsViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = TeamsRepository(ApiClient.worldCupApiService)
 
     private val _uiState = MutableStateFlow<TeamsUiState>(TeamsUiState.Loading)
@@ -35,7 +37,10 @@ class TeamsViewModel : ViewModel() {
                     _uiState.value = TeamsUiState.Success(teams)
                 },
                 onFailure = { error ->
-                    _uiState.value = TeamsUiState.Error(error.localizedMessage ?: "Unknown error occurred")
+                    _uiState.value = TeamsUiState.Error(
+                        error.localizedMessage
+                            ?: getApplication<Application>().getString(R.string.error_unknown)
+                    )
                 }
             )
         }

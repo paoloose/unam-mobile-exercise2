@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.screens
+package site.paoloose.unam.exercise2.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -17,22 +17,23 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
-import site.paoloose.unam.exercise1.data.remote.dto.PlayerDto
-import site.paoloose.unam.exercise1.ui.viewmodel.SquadUiState
+import site.paoloose.unam.exercise2.data.remote.dto.PlayerDto
+import site.paoloose.unam.exercise2.ui.viewmodel.SquadUiState
 import androidx.compose.ui.res.stringResource
-import site.paoloose.unam.exercise1.R
-import site.paoloose.unam.exercise1.ui.viewmodel.SquadViewModel
+import site.paoloose.unam.exercise2.R
+import site.paoloose.unam.exercise2.ui.viewmodel.SquadViewModel
 
 @Composable
 fun SquadScreen(
     teamId: Int,
+    useFootballApi: Boolean = false,
     modifier: Modifier = Modifier,
     viewModel: SquadViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(teamId) {
-        viewModel.fetchSquad(teamId)
+    LaunchedEffect(teamId, useFootballApi) {
+        viewModel.fetchSquad(teamId, useFootballApi)
     }
 
     Box(

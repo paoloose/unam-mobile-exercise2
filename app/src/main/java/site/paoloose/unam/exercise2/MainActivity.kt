@@ -1,12 +1,12 @@
-package site.paoloose.unam.exercise1
+package site.paoloose.unam.exercise2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import site.paoloose.unam.exercise1.ui.Exercise1App
-import site.paoloose.unam.exercise1.ui.theme.Exercise1Theme
+import site.paoloose.unam.exercise2.ui.Exercise2App
+import site.paoloose.unam.exercise2.ui.theme.Exercise2Theme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         setContent {
-            Exercise1Theme {
-                Exercise1App()
+            Exercise2Theme {
+                Exercise2App()
             }
         }
     }

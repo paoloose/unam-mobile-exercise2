@@ -1,7 +1,7 @@
-package site.paoloose.unam.exercise1.data.repository
+package site.paoloose.unam.exercise2.data.repository
 
-import site.paoloose.unam.exercise1.data.remote.WorldCupApiService
-import site.paoloose.unam.exercise1.data.remote.dto.TeamVenueDto
+import site.paoloose.unam.exercise2.data.remote.WorldCupApiService
+import site.paoloose.unam.exercise2.data.remote.dto.TeamVenueDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

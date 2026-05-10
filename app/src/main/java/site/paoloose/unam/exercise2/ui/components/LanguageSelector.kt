@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.components
+package site.paoloose.unam.exercise2.ui.components
 
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatDelegate
@@ -28,8 +28,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
-import site.paoloose.unam.exercise1.R
-import site.paoloose.unam.exercise1.ui.theme.Exercise1Theme
+import site.paoloose.unam.exercise2.R
+import site.paoloose.unam.exercise2.ui.theme.Exercise2Theme
 
 @Composable
 fun LanguageSelector() {
@@ -95,7 +95,7 @@ data class Language(val code: String, @param:StringRes val labelRes: Int)
 @Preview(showBackground = true)
 @Composable
 fun LanguageSelectorPreview() {
-    Exercise1Theme {
+    Exercise2Theme {
         LanguageSelector()
     }
 }

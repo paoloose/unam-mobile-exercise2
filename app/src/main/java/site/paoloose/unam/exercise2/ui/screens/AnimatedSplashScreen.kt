@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.screens
+package site.paoloose.unam.exercise2.ui.screens
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -25,14 +25,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import site.paoloose.unam.exercise1.R
+import site.paoloose.unam.exercise2.R
+import site.paoloose.unam.exercise2.ui.theme.AppWhite
+import site.paoloose.unam.exercise2.ui.theme.GreenDark
 
 // An interested trick that I learnt
 // It is not possible to use a component as the splash screen for your android app
@@ -94,7 +95,7 @@ fun AnimatedSplashScreen(onSplashFinished: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(site.paoloose.unam.exercise1.ui.theme.GreenDark), // Match native splash screen
+            .background(GreenDark), // Match native splash screen
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -114,7 +115,7 @@ fun AnimatedSplashScreen(onSplashFinished: () -> Unit) {
 
             Text(
                 text = stringResource(R.string.splash_title),
-                color = Color.White,
+                color = AppWhite,
                 style = MaterialTheme.typography.displayMedium, // Increased from displaySmall to displayMedium
                 fontWeight = FontWeight.ExtraBold,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -128,7 +129,7 @@ fun AnimatedSplashScreen(onSplashFinished: () -> Unit) {
 
             Text(
                 text = stringResource(R.string.splash_subtitle),
-                color = Color.White.copy(alpha = 0.8f),
+                color = AppWhite.copy(alpha = 0.8f),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Medium,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,

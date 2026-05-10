@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.theme
+package site.paoloose.unam.exercise2.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 import androidx.compose.ui.text.font.Font
-import site.paoloose.unam.exercise1.R
+import site.paoloose.unam.exercise2.R
 
 val BarlowCondensed = FontFamily(
     Font(R.font.barlow_condensed_regular, FontWeight.Normal),

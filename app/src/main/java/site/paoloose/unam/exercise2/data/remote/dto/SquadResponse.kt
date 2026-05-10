@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.data.remote.dto
+package site.paoloose.unam.exercise2.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

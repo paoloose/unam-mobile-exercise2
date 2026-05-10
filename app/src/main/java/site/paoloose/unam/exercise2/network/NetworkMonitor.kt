@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.network
+package site.paoloose.unam.exercise2.network
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -22,6 +22,7 @@ import java.net.Socket
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class NetworkMonitor(context: Context) {
     // Use application context to avoid memory leaks
     private val appContext = context.applicationContext

@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.screens
+package site.paoloose.unam.exercise2.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -29,10 +29,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
-import site.paoloose.unam.exercise1.R
-import site.paoloose.unam.exercise1.data.remote.dto.TeamVenueDto
-import site.paoloose.unam.exercise1.ui.viewmodel.TeamsUiState
-import site.paoloose.unam.exercise1.ui.viewmodel.TeamsViewModel
+import site.paoloose.unam.exercise2.ui.theme.AppBlack
+import site.paoloose.unam.exercise2.ui.theme.AppWhite
+import site.paoloose.unam.exercise2.ui.theme.GoldDark
+import site.paoloose.unam.exercise2.ui.theme.GoldBright
+import site.paoloose.unam.exercise2.ui.theme.RedAccent
+import site.paoloose.unam.exercise2.ui.theme.RedDark
+import site.paoloose.unam.exercise2.R
+import site.paoloose.unam.exercise2.data.remote.dto.TeamVenueDto
+import site.paoloose.unam.exercise2.ui.viewmodel.TeamsUiState
+import site.paoloose.unam.exercise2.ui.viewmodel.TeamsViewModel
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -69,8 +75,8 @@ fun HomeScreen(
                             Brush.verticalGradient(
                                 colors = listOf(
                                     Color.Transparent,
-                                    Color.Black.copy(alpha = 0.4f),
-                                    Color.Black.copy(alpha = 0.8f) // not full black
+                                    AppBlack.copy(alpha = 0.4f),
+                                    AppBlack.copy(alpha = 0.8f) // not full black
                                 ),
                                 // 200dp in pixels is roughly where we want to start the transition
                                 startY = 150f
@@ -94,7 +100,7 @@ fun HomeScreen(
                     text = stringResource(R.string.title_meet_teams),
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color.White
+                    color = AppWhite
                 )
                 // Reload data button
                 Box(
@@ -107,7 +113,7 @@ fun HomeScreen(
                         Icon(
                             imageVector = Icons.Default.Refresh,
                             contentDescription = stringResource(R.string.cd_refresh),
-                            tint = Color.White
+                            tint = AppWhite
                         )
                     }
                 }
@@ -212,14 +218,14 @@ fun TeamVenueCard(teamVenue: TeamVenueDto, onClick: () -> Unit) {
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(4.dp))
-                                    .background(site.paoloose.unam.exercise1.ui.theme.RedDark)
-                                    .padding(horizontal = 6.dp, vertical = 2.dp)
-                            ) {
-                                Text(
-                                    text = teamVenue.team.code,
-                                    style = MaterialTheme.typography.labelMedium,
-                                    fontWeight = FontWeight.Bold,
-                                    color = site.paoloose.unam.exercise1.ui.theme.RedAccent
+                                     .background(RedDark)
+                                     .padding(horizontal = 6.dp, vertical = 2.dp)
+                             ) {
+                                 Text(
+                                     text = teamVenue.team.code,
+                                     style = MaterialTheme.typography.labelMedium,
+                                     fontWeight = FontWeight.Bold,
+                                     color = RedAccent
                                 )
                             }
                             Spacer(modifier = Modifier.width(8.dp))
@@ -273,7 +279,7 @@ fun TeamVenueCard(teamVenue: TeamVenueDto, onClick: () -> Unit) {
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(4.dp))
-                            .background(Color(0xFF5A4300)) // Dark Gold
+                            .background(GoldDark) // Dark Gold
                             .padding(horizontal = 6.dp, vertical = 4.dp),
                         contentAlignment = Alignment.Center
                     ) {
@@ -281,7 +287,7 @@ fun TeamVenueCard(teamVenue: TeamVenueDto, onClick: () -> Unit) {
                             text = "%,d".format(teamVenue.venue.capacity),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFFFC107) // Bright Gold/Yellow
+                            color = GoldBright // Bright Gold
                         )
                     }
                 }

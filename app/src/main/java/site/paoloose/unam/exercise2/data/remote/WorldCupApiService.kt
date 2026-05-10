@@ -1,8 +1,8 @@
-package site.paoloose.unam.exercise1.data.remote
+package site.paoloose.unam.exercise2.data.remote
 
 import retrofit2.http.GET
 import retrofit2.http.Query
-import site.paoloose.unam.exercise1.data.remote.dto.TeamsResponse
+import site.paoloose.unam.exercise2.data.remote.dto.TeamsResponse
 
 interface WorldCupApiService {
     @GET("teams2026.php")
@@ -14,5 +14,5 @@ interface WorldCupApiService {
     @GET("squads.php")
     suspend fun getSquad(
         @Query("team") teamId: Int
-    ): site.paoloose.unam.exercise1.data.remote.dto.SquadResponse
+    ): site.paoloose.unam.exercise2.data.remote.dto.SquadResponse
 }

@@ -1,4 +1,4 @@
-package site.paoloose.unam.exercise1.ui.theme
+package site.paoloose.unam.exercise2.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -34,3 +34,7 @@ val GreenAccent = Color(0xFFECFF43)
 // Neutrals
 val AppBlack = Color(0xFF000000)
 val AppWhite = Color(0xFFFFFFFF)
+
+// Gold
+val GoldDark = Color(0xFF5A4300)
+val GoldBright = Color(0xFFFFC107)
