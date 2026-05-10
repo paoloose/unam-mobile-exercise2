@@ -29,3 +29,7 @@ Build #AI-253.31033.145.2533.15113396
 ```console
 ./gradlew assembleDebug
 ```
+
+## Demo
+
+![Demo](./assets/demo.mp4)
